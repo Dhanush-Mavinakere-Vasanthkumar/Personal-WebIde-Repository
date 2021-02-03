@@ -1,0 +1,219 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.extraWorkManagement1",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"ach": "ach",
+		"resources": "resources.json",
+		"dataSources": {},
+		"sourceTemplate": {
+			"id": "sap.ui.ui5-template-plugin.2masterdetail",
+			"version": "1.32.5"
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://detail-view",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "com.sap.build.standard.extraWorkManagement1.view.App",
+			"type": "XML",
+			"async": false,
+			"id": "app"
+		},
+		"autoPrefixId": true,
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.extraWorkManagement1.view",
+				"controlId": "idAppControl",
+				"clearTarget": false,
+				"controlAggregation": "detailPages",
+				"async": false,
+				"bypassed": {
+					"target": [
+						"Category",
+						"MasterPage"
+					]
+				}
+			},
+			"targets": {
+				"MasterPage": {
+					"controlAggregation": "masterPages",
+					"viewName": "MasterPage",
+					"viewId": "MasterPage",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Category": {
+					"controlAggregation": "detailPages",
+					"viewName": "Category",
+					"viewId": "Category",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Item": {
+					"controlAggregation": "detailPages",
+					"viewName": "Item",
+					"viewId": "Item",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Requirement": {
+					"controlAggregation": "detailPages",
+					"viewName": "Requirement",
+					"viewId": "Requirement",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Billing": {
+					"controlAggregation": "detailPages",
+					"viewName": "Billing",
+					"viewId": "Billing",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"ClientApproval": {
+					"controlAggregation": "detailPages",
+					"viewName": "ClientApproval",
+					"viewId": "ClientApproval",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"BillPosting": {
+					"controlAggregation": "detailPages",
+					"viewName": "BillPosting",
+					"viewId": "BillPosting",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Feasibility": {
+					"controlAggregation": "detailPages",
+					"viewName": "Feasibility",
+					"viewId": "Feasibility",
+					"viewLevel": 2,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "MasterPage",
+					"name": "MasterPage",
+					"target": [
+						"Category",
+						"MasterPage"
+					]
+				},
+				{
+					"pattern": "MasterPage/Category",
+					"name": "Category",
+					"target": [
+						"MasterPage",
+						"Category"
+					]
+				},
+				{
+					"pattern": "MasterPage/Item",
+					"name": "Item",
+					"target": [
+						"MasterPage",
+						"Item"
+					]
+				},
+				{
+					"pattern": "MasterPage/Requirement",
+					"name": "Requirement",
+					"target": [
+						"MasterPage",
+						"Requirement"
+					]
+				},
+				{
+					"pattern": "MasterPage/Billing",
+					"name": "Billing",
+					"target": [
+						"MasterPage",
+						"Billing"
+					]
+				},
+				{
+					"pattern": "MasterPage/ClientApproval",
+					"name": "ClientApproval",
+					"target": [
+						"MasterPage",
+						"ClientApproval"
+					]
+				},
+				{
+					"pattern": "MasterPage/BillPosting",
+					"name": "BillPosting",
+					"target": [
+						"MasterPage",
+						"BillPosting"
+					]
+				},
+				{
+					"pattern": "MasterPage/Feasibility",
+					"name": "Feasibility",
+					"target": [
+						"MasterPage",
+						"Feasibility"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"Category",
+						"MasterPage"
+					]
+				}
+			]
+		}
+	}
+}

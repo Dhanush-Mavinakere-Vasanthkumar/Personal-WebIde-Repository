@@ -1,0 +1,31 @@
+{
+    "dataBinding": {
+        "/webapp/view/MasterPage.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Category.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Item.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Requirement.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Billing.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/ClientApproval.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/BillPosting.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Feasibility.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Dialog1.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}

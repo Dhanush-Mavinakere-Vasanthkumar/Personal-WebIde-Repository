@@ -1,0 +1,39 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.extraWorkManagement1.controller.MasterPage" xmlns="sap.m">
+    <Page id="masterpage" title="Client Extra Work" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <List id="list" mode="SingleSelectMaster" width="100%" footerText="" backgroundDesign="Solid" 
+            	showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" 
+            	itemPress="_onStandardListItemPress">
+                <!--<infoToolbar>-->
+                <!--    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">-->
+                <!--        <content>-->
+                <!--            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+                <!--        </content>-->
+                <!--    </Toolbar>-->
+                <!--</infoToolbar>-->
+                <!--<headerToolbar>-->
+                <!--    <Toolbar enabled="true" visible="true" width="" design="Solid">-->
+                <!--        <content>-->
+                <!--            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>-->
+                <!--        </content>-->
+                <!--    </Toolbar>-->
+                <!--</headerToolbar>-->
+                <items>
+                    <StandardListItem id="Category" title="Extra Work Category" type="Navigation"/>
+                    <StandardListItem id="Item" title="Extra Work Item" type="Navigation"/>
+                    <StandardListItem id="Requirement" title="Requirement Entry" type="Navigation"/>
+                    <StandardListItem id="Feasibility" title="Feasibility Approval" type="Navigation"/>
+                    <StandardListItem id="Billing" title="Billing" type="Navigation"/>
+                    <StandardListItem id="ClientApproval" title="Client Approval" type="Navigation"/>
+                    <StandardListItem id="BillPosting" title="Bill For Posting" type="Navigation"/>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>
