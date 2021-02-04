@@ -1,17 +1,177 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.extraWorkManagement1.controller.BillPosting" xmlns="sap.m">
-    <Page showHeader="true" title="Extra Work Bill For Posting" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
-        <content/>
-        <footer>
-            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
-                <content>
-                    <ToolbarSpacer width=""/>
-                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
-                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
-                </content>
-            </OverflowToolbar>
-        </footer>
-        <headerContent/>
-        <subHeader/>
-        <customHeader/>
-    </Page>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.extraWorkManagement1.controller.BillPosting" xmlns="sap.m"
+	xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable" xmlns:uiTable="sap.ui.table">
+	<Page showHeader="true" title="Extra Work Bill For Posting" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+		<content>
+			<form:SimpleForm title="" editable="true" labelSpanL="4" emptySpanL="0" emptySpanM="0" adjustLabelSpan="false" labelSpanM="4" columnsL="2"
+				columnsM="2" layout="ResponsiveGridLayout">
+				<form:content>
+				
+					<Toolbar id="TB1">
+						<Title text="" level="H4" titleStyle="H4"/>
+						<ToolbarSpacer/>
+						<Button text="Search" type="Accept"/>
+						<!--<Button text="Clear" type="Reject"/>-->
+					</Toolbar>
+				
+					<Label text="Project" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true">
+						<layoutData>
+						<layout:GridData span="L2 M2"/>
+					</layoutData>
+					</Label>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+						<layoutData>
+						<layout:GridData span="L4 M4"/>
+					</layoutData>
+					</ComboBox>
+					<Label text="Client" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true">
+						<layoutData>
+						<layout:GridData span="L2 M2"/>
+					</layoutData>
+					</Label>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+						<layoutData>
+						<layout:GridData span="L4 M4"/>
+					</layoutData>
+					</ComboBox>
+					<Label text="Ref No." design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true">
+						<layoutData>
+						<layout:GridData span="L2 M2"/>
+					</layoutData>
+					</Label>
+					<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+						valueStateText="Invalid entry" maxLength="0">
+						<layoutData>
+						<layout:GridData span="L4 M4"/>
+					</layoutData>
+					</Input>
+					<Label text="Bill Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true">
+						<layoutData>
+						<layout:GridData span="L2 M2"/>
+					</layoutData>
+					</Label>
+					<DatePicker width="auto" displayFormat="dd-MM-yyyy" required="false" valueStateText="Invalid entry" enabled="true" visible="true"
+						valueFormat="dd-MM-yyyy">
+						<layoutData>
+						<layout:GridData span="L4 M4"/>
+					</layoutData>
+					</DatePicker>
+					</form:content>
+			</form:SimpleForm>
+			
+			<ScrollContainer height="50%" width="100%" horizontal="true" vertical="true" focusable="true">
+				<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+					class="sapUiResponsiveMargin">
+					<headerToolbar>
+						<OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+							<content>
+								<Title text="Items (1)" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+								<ToolbarSpacer width=""/>
+							</content>
+						</OverflowToolbar>
+					</headerToolbar>
+					<columns>
+						<Column width="5%" hAlign="Middle" vAlign="Middle" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<checkBox></checkBox>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Category" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Extra Work Item" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Quantity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Tax" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Adittion" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Deduction" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+						<Column width="auto" hAlign="Left" vAlign="Middle" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+							<header>
+								<Text text="Net Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							</header>
+							<footer/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Active">
+							<cells>
+								<checkBox></checkBox>
+								<Text text="GRILL WORK"/>
+								<Text text="Utility Grill Work Door"/>
+								<Text text="Lumpsum"/>
+								<Text text="1.000"/>
+								<Text text="27294.00"/>
+								<Text text="0"/>
+								<Text text="0"/>
+								<Text text="0"/>
+								<Text text="27294.00"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</ScrollContainer>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+					<Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
 </mvc:View>

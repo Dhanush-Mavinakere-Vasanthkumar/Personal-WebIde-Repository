@@ -30,6 +30,7 @@
                     <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
                 </form:layout>
             </form:Form>
+            <ScrollContainer height="50%" width="100%" horizontal="true" vertical="true" focusable="true">
             <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
                 <infoToolbar>
                     <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
@@ -122,6 +123,7 @@
                     </ColumnListItem>
                 </items>
             </Table>
+            </ScrollContainer>
         </content>
         <beginButton/>
         <buttons>
