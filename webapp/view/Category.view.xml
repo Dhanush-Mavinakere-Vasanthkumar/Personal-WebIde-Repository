@@ -3,6 +3,7 @@
 	<Page title="Client Extra Work Category" showHeader="true" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
 		<content>
 			<form:SimpleForm title="" editable="true" maxContainerCols="1" columnsL="1" columnsXL="1" layout="ResponsiveGridLayout">
+				<form:content>
 				<Label text="Category" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				<!--<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="50%" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>-->
 				<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="50%">
@@ -18,6 +19,7 @@
 				<Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				<CheckBox text="Checkbox Text" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"
 					wrapping="false" useEntireWidth="true"/>
+					</form:content>
 			</form:SimpleForm>
 			
 			<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"

@@ -2,7 +2,10 @@
 	xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
 	<Page showHeader="true" title="Client Extra Work Item" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
 		<content>
-			<form:SimpleForm title="" editable="true" maxContainerCols="2" columnsL="2" columnsXL="2" layout="ResponsiveGridLayout">
+			<form:SimpleForm title="" editable="true" labelSpanL="4" emptySpanL="0" emptySpanM="0" adjustLabelSpan="false"
+			labelSpanM="4" columnsL="2" columnsM="2" layout="ResponsiveGridLayout">
+				<form:content>
+				<core:Title/>
 				<Label text="Extrawork Category" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
 					<items>
@@ -20,7 +23,7 @@
 				<Label text="Remarks" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
 					valueStateText="Invalid entry" maxLength="0"/>
-				<coreTitle/>
+				<core:Title/>
 				<Label text="Unit" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
 					<items>
@@ -38,6 +41,7 @@
 				<Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
 				<CheckBox text="Taxable" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false"
 					useEntireWidth="true"/>
+					</form:content>
 			</form:SimpleForm>
 			
 			<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingScrollToLoad="true"

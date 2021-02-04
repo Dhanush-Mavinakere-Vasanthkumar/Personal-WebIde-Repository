@@ -1,442 +1,525 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.extraWorkManagement1.controller.Billing" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
-    <Page showHeader="true" title="Extra Work Bill" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
-        <content>
-            <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="SpaceAround" renderType="Div" visible="true" displayInline="false">
-                <items>
-                    <form:Form width="100%" editable="true" visible="true">
-                        <form:title/>
-                        <form:formContainers>
-                            <form:FormContainer visible="true">
-                                <form:formElements>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Project" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
-                                                <items>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                </items>
-                                            </ComboBox>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Client" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
-                                                <items>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                </items>
-                                            </ComboBox>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Prepared By" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
-                                                <items>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                </items>
-                                            </ComboBox>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Prepared Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Category" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
-                                                <items>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                </items>
-                                            </ComboBox>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Remarks" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <TextArea rows="2" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
-                                        </form:fields>
-                                    </form:FormElement>
-                                </form:formElements>
-                                <form:title/>
-                            </form:FormContainer>
-                        </form:formContainers>
-                        <form:layout>
-                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
-                        </form:layout>
-                    </form:Form>
-                    <form:Form width="100%" editable="true" visible="true">
-                        <form:title/>
-                        <form:formContainers>
-                            <form:FormContainer visible="true">
-                                <form:formElements>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Ref No." design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Date" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Verified By" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
-                                                <items>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                </items>
-                                            </ComboBox>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Verified Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true" valueFormat="yyyyMMdd"/>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Discount Type" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
-                                                <items>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                    <core:Item text="Item" enabled="true" key="Item"/>
-                                                </items>
-                                            </ComboBox>
-                                        </form:fields>
-                                    </form:FormElement>
-                                    <form:FormElement visible="true">
-                                        <form:label>
-                                            <Label text="Bill Discount" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                                        </form:label>
-                                        <form:fields>
-                                            <Input type="Text" showValueHelp="false" enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
-                                        </form:fields>
-                                    </form:FormElement>
-                                </form:formElements>
-                                <form:title/>
-                            </form:FormContainer>
-                        </form:formContainers>
-                        <form:layout>
-                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
-                        </form:layout>
-                    </form:Form>
-                </items>
-                <layoutData/>
-            </HBox>
-            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
-                <infoToolbar>
-                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
-                        <content>
-                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </content>
-                    </Toolbar>
-                </infoToolbar>
-                <headerToolbar>
-                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
-                        <content>
-                            <Title text="Requirement Details" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
-                            <ToolbarSpacer width=""/>
-                        </content>
-                    </OverflowToolbar>
-                </headerToolbar>
-                <columns>
-                    <Column width="10%" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header/>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Category" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Item" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Quantity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                </columns>
-                <items>
-                    <ColumnListItem type="Active">
-                        <cells>
-                            <CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false" useEntireWidth="true"/>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
-                        </cells>
-                    </ColumnListItem>
-                    <ColumnListItem type="Active">
-                        <cells>
-                            <CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false" useEntireWidth="true"/>
-                            <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
-                        </cells>
-                    </ColumnListItem>
-                    <ColumnListItem type="Active">
-                        <cells>
-                            <CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false" useEntireWidth="true"/>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
-            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
-                <infoToolbar>
-                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
-                        <content>
-                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </content>
-                    </Toolbar>
-                </infoToolbar>
-                <headerToolbar>
-                    <OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
-                        <content>
-                            <Title text="Extra Work Bill Details" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
-                            <ToolbarSpacer width=""/>
-                            <OverflowToolbarButton text="Add" type="Transparent" icon="sap-icon://add-equipment" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
-                        </content>
-                    </OverflowToolbar>
-                </headerToolbar>
-                <columns>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Category" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Item" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Quantity" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Tax" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Addition" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Deduction" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
-                        <header>
-                            <Text text="Net Amount" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </header>
-                        <footer/>
-                    </Column>
-                </columns>
-                <items>
-                    <ColumnListItem type="Active">
-                        <cells>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                        </cells>
-                    </ColumnListItem>
-                    <ColumnListItem type="Active">
-                        <cells>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                        </cells>
-                    </ColumnListItem>
-                    <ColumnListItem type="Active">
-                        <cells>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                            <layout:HorizontalLayout>
-                                <layout:content/>
-                            </layout:HorizontalLayout>
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
-        </content>
-        <footer>
-            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
-                <content>
-                    <ToolbarSpacer width=""/>
-                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
-                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
-                </content>
-            </OverflowToolbar>
-        </footer>
-        <headerContent/>
-        <subHeader/>
-        <customHeader/>
-    </Page>
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.extraWorkManagement1.controller.Billing" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<Page showHeader="true" title="Extra Work Bill" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+		<content>
+			<form:SimpleForm title="" editable="true" labelSpanL="4" emptySpanL="0" emptySpanM="0" adjustLabelSpan="true" labelSpanM="4" columnsL="2"
+				columnsM="2" layout="ResponsiveGridLayout">
+				<form:content>
+					<core:Title/>
+					<Label text="Project" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+					</ComboBox>
+					<Label text="Client" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+					</ComboBox>
+					<Label text="Prepared By" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+					</ComboBox>
+					<Label text="Prepared Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"
+						valueFormat="yyyyMMdd"/>
+					<Label text="Category" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+					</ComboBox>
+					<Label text="Remarks" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<TextArea rows="2" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+					<core:Title/>
+					<Label text="Ref No." design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+						valueStateText="Invalid entry" maxLength="0"/>
+					<Label text="Date" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"
+						valueFormat="yyyyMMdd"/>
+					<Label text="Verified By" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+					</ComboBox>
+					<Label text="Verified Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"
+						valueFormat="yyyyMMdd"/>
+					<Label text="Discount Type" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+						<items>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+							<core:Item text="Item" enabled="true" key="Item"/>
+						</items>
+					</ComboBox>
+					<Label text="Bill Discount" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Input type="Text" showValueHelp="false" enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false"
+						valueStateText="Invalid entry" maxLength="0"/>
+				</form:content>
+			</form:SimpleForm>
+			<!--<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="SpaceAround" renderType="Div"-->
+			<!--	visible="true" displayInline="false">-->
+			<!--	<items>-->
+			<!--		<form:Form width="100%" editable="true" visible="true">-->
+			<!--			<form:title/>-->
+			<!--			<form:formContainers>-->
+			<!--				<form:FormContainer visible="true">-->
+			<!--					<form:formElements>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Project" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">-->
+			<!--									<items>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--									</items>-->
+			<!--								</ComboBox>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Client" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">-->
+			<!--									<items>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--									</items>-->
+			<!--								</ComboBox>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Prepared By" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">-->
+			<!--									<items>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--									</items>-->
+			<!--								</ComboBox>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Prepared Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"-->
+			<!--									valueFormat="yyyyMMdd"/>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Category" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">-->
+			<!--									<items>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--									</items>-->
+			<!--								</ComboBox>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Remarks" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<TextArea rows="2" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--					</form:formElements>-->
+			<!--					<form:title/>-->
+			<!--				</form:FormContainer>-->
+			<!--			</form:formContainers>-->
+			<!--			<form:layout>-->
+			<!--				<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>-->
+			<!--			</form:layout>-->
+			<!--		</form:Form>-->
+			<!--		<form:Form width="100%" editable="true" visible="true">-->
+			<!--			<form:title/>-->
+			<!--			<form:formContainers>-->
+			<!--				<form:FormContainer visible="true">-->
+			<!--					<form:formElements>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Ref No." design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"-->
+			<!--									valueStateText="Invalid entry" maxLength="0"/>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Date" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"-->
+			<!--									valueFormat="yyyyMMdd"/>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Verified By" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">-->
+			<!--									<items>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--									</items>-->
+			<!--								</ComboBox>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Verified Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"-->
+			<!--									valueFormat="yyyyMMdd"/>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Discount Type" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">-->
+			<!--									<items>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--										<core:Item text="Item" enabled="true" key="Item"/>-->
+			<!--									</items>-->
+			<!--								</ComboBox>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--						<form:FormElement visible="true">-->
+			<!--							<form:label>-->
+			<!--								<Label text="Bill Discount" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>-->
+			<!--							</form:label>-->
+			<!--							<form:fields>-->
+			<!--								<Input type="Text" showValueHelp="false" enabled="false" visible="true" width="auto" valueHelpOnly="false" required="false"-->
+			<!--									valueStateText="Invalid entry" maxLength="0"/>-->
+			<!--							</form:fields>-->
+			<!--						</form:FormElement>-->
+			<!--					</form:formElements>-->
+			<!--					<form:title/>-->
+			<!--				</form:FormContainer>-->
+			<!--			</form:formContainers>-->
+			<!--			<form:layout>-->
+			<!--				<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>-->
+			<!--			</form:layout>-->
+			<!--		</form:Form>-->
+			<!--	</items>-->
+			<!--	<layoutData/>-->
+			<!--</HBox>-->
+			<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+				class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+						<content>
+							<Title text="Requirement Details" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+							<ToolbarSpacer width=""/>
+						</content>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="5%" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<checkBox/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Category" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Item" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Quantity" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active">
+						<cells>
+							<CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false"
+								useEntireWidth="true"/>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+								valueStateText="Invalid entry" maxLength="0"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem type="Active">
+						<cells>
+							<CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false"
+								useEntireWidth="true"/>
+							<Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+								valueStateText="Invalid entry" maxLength="0"/>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem type="Active">
+						<cells>
+							<CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false"
+								useEntireWidth="true"/>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false"
+								valueStateText="Invalid entry" maxLength="0"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+				class="sapUiResponsiveMargin">
+				<infoToolbar>
+					<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+						<content>
+							<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</content>
+					</Toolbar>
+				</infoToolbar>
+				<headerToolbar>
+					<OverflowToolbar width="auto" height="auto" design="Transparent" visible="true" enabled="true">
+						<content>
+							<Title text="Extra Work Bill Details" titleStyle="Auto" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+							<ToolbarSpacer width=""/>
+							<OverflowToolbarButton text="Add" type="Transparent" icon="sap-icon://add-equipment" iconFirst="true" width="auto" enabled="true"
+								visible="true" iconDensityAware="false"/>
+						</content>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Category" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Item" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Unit" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Quantity" width="auto" maxLines="1" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Rate" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Tax" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Addition" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Deduction" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+					<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+						<header>
+							<Text text="Net Amount" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+						</header>
+						<footer/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active">
+						<cells>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem type="Active">
+						<cells>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+						</cells>
+					</ColumnListItem>
+					<ColumnListItem type="Active">
+						<cells>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<layout:content/>
+							</layout:HorizontalLayout>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+					<Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
 </mvc:View>
